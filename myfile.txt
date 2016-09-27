@@ -1,2 +1,2 @@
 Hello, this is the repository of Daniel Vincent Royce D. Martin.
-Completed my first commit and push.
+Completed my first commit and push. 
