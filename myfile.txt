@@ -2,4 +2,10 @@ Hello, this is the repository of Daniel Vincent Royce D. Martin.
 Completed my first commit and push. 
 
 Hi royce. Try lang. Hahaha
+<<<<<<< HEAD
+
+
+eto edited in notepad++ hindi sa browser.
+=======
 checked
+>>>>>>> 513007ef592e1014461f5ca7ddee49d3897e35e2
