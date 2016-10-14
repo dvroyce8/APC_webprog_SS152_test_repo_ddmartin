@@ -1,12 +1,13 @@
 </DOCTYPE html>
 <html>
 <head>
-	<title>Exercise 1</title>
+	<title>Exercise 3</title>
 <style>
 body {
 	background-image: url("bg1exercise2_WIP.jpg");
 }
 table, th, td {
+	position: relative;
 	border: 1px solid black;
 	border-collapse: collapse;
 }
@@ -17,6 +18,10 @@ th {
 td {
     background-color: #F0FFF0;
     color: black;
+}
+button {
+	position: absolute;
+	right: 0px;
 }
 </style>
 </head>
@@ -37,11 +42,16 @@ td {
 		<th>Hobbies & Interests</th>
 			<!--<td>Eating different cuisine<br>Playing Games<br>Watching Cartoons,Anime, & Animations<br>Learning new skills</td>-->
 			<td>
-			Favorite Food:<strong id="trivia" style="visibility:hidden">Bacon & Pie</strong><br>
-			Favorite Pasttime:<strong id="trivia" style="visibility:hidden">Gaming"</strong><br>
-			Favorite Game:<strong id="trivia" style="visibility:hidden">Tomba 2</strong><br>
-			Favorite TV Show:<strong id="trivia" style="visibility:hidden">Spongeob Squarepants</strong><br>
-			Current Favorite Quote:<strong id="trivia" style="visibility:hidden">Deepfry the Deep fryer!!!!</strong>
+			Favorite Food:<strong id="triviaFood" style="visibility:hidden">Bacon & Pie</strong>
+				<button type= "button" onclick="document.getElementById('triviaFood').style.visibility='visible'"> Know More!!!</button><br>
+			Favorite Pasttime:<strong id="triviaPasttime" style="visibility:hidden">Gaming</strong>
+				<button type= "button" onclick="document.getElementById('triviaPasttime').style.visibility='visible'"> Know More!!!</button><br>
+			Favorite Game:<strong id="triviaGame" style="visibility:hidden">Tomba 2</strong>
+				<button type= "button" onclick="document.getElementById('triviaGame').style.visibility='visible'"> Know More!!!</button><br>
+			Favorite TV Show:<strong id="triviaTVShow" style="visibility:hidden">Spongeob Squarepants</strong>
+				<button type= "button" onclick="document.getElementById('triviaTVShow').style.visibility='visible'"> Know More!!!</button><br>
+			Current Favorite Quote:<strong id="triviaQuote" style="visibility:hidden">Deepfry the Deep fryer!!!!</strong>
+				<button type= "button" onclick="document.getElementById('triviaQuote').style.visibility='visible'"> Know More!!!</button>
 			</td>
 	</tr>
 	<tr>
@@ -58,10 +68,7 @@ style="width:404px;height:328px;">
 <img src="MySisters.jpg" alt="Me and my Sisters"
 style="width:404px;height:328px;">
 
-<button type= "button"
-onclick="document.getElementById('trivia').style.visibility='visible'">
-Know More!!!
-</button>
+
 
 </body>
 </html>
