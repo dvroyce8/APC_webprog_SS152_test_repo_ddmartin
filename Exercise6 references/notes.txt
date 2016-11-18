@@ -1,0 +1,5 @@
+paste codeigniter in htdocs
+
+move all php file in the right folders except the config files
+
+edit the codes in the config folder
