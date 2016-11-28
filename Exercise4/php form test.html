@@ -21,6 +21,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $FnameErr = "Only letters and white space allowed"; 
     }
   }
+  
+  if ( empty($_POST["Nname"]))	{
+	$NnameErr  "Name is required";
+  }	else{
+	$Nname = test_input($_POST["Nname"]);
+	 if (!preg_match("/^[a-zA-Z ]*$/",$Nnamename)) {
+      $NnameErrnameErr = "Only letters and white space allowed"; 
+    }
+  }
+  
+   if (empty($_POST["Email"])) {
+    $EmailErr = "Email is required";
+  } else {
+    $Email = test_input($_POST["Email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+      $EmailErr = "Invalid email format"; 
+    }
+  }
+  
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+  
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+  
 }
 
 function test_input($data){
