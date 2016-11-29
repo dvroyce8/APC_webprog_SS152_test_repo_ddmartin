@@ -2,24 +2,36 @@
 <html>
 <head>
 	<title>Exercise 5</title>
-<style>
-.error {color: red;}
-body {
-	background-image: url("bg1exercise2_WIP.jpg");
-}
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-td {
-    background-color: #F0FFF0;
-    color: black;
-}
-</style>
+	<style>
+		.error {color: red;}
+		body {
+			background-image: url("bg1exercise2_WIP.jpg");
+		}
+		.toppicL{
+			position: relative;
+			left:0px;
+			width:404px;
+			height:328px;
+		}
+		.toppicR{
+			position: relative;
+			right:0px;
+			width:404px;
+			height:328px;
+		}
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+		td {
+			background-color: #F0FFF0;
+			color: black;
+		}
+	</style>
 </head>
 <body >
 <table style="width:50%">
@@ -55,29 +67,29 @@ td {
 	</tr>
 
 	<img src="MyFamily.jpg" alt="Me and my Family"
-style="width:404px;height:328px;">
-<img src="MySisters.jpg" alt="Me and my Sisters"
-style="width:404px;height:328px;">
+ class="toppicL">
+	<img src="MySisters.jpg" alt="Me and my Sisters"
+ class="toppicR">
 
 <button type= "button"
 onclick="document.getElementById('triviaF').style.visibility='visible'">
-Know More!!!
+Know More!!!<br>
 </button>
 <button type= "button"
 onclick="document.getElementById('triviaP').style.visibility='visible'">
-Know More!!!
+Know More!!!<br>
 </button>
 <button type= "button"
 onclick="document.getElementById('triviaG').style.visibility='visible'">
-Know More!!!
+Know More!!!<br>
 </button>
 <button type= "button"
 onclick="document.getElementById('triviaT').style.visibility='visible'">
-Know More!!!
+Know More!!!<br>
 </button>
 <button type= "button"
 onclick="document.getElementById('triviaQ').style.visibility='visible'">
-Know More!!!
+Know More!!!<br>
 </button>
 <?php
 
