@@ -38,11 +38,11 @@ td {
 		<th>Hobbies & Interests</th>
 			<!--<td>Eating different cuisine<br>Playing Games<br>Watching Cartoons,Anime, & Animations<br>Learning new skills</td>-->
 			<td>
-			Favorite Food:<strong>Bacon & Pie</strong><br>
-			Favorite Pasttime:<strong>Gaming</strong><br>
-			Favorite Game:<strong>Tomba 2</strong><br>
-			Favorite TV Show:<strong> Spongeob Squarepants</strong><br>
-			Current Favorite Quote:<strong> Deepfry the Deep fryer!!!!</strong>
+			Favorite Food:<strong id="triviaF" style="visibility:hidden">Bacon & Pie</strong><br>
+			Favorite Pasttime:<strong id="triviaP" style="visibility:hidden">Gaming"</strong><br>
+			Favorite Game:<strong id="triviaG" style="visibility:hidden">Tomba 2</strong><br>
+			Favorite TV Show:<strong id="triviaT" style="visibility:hidden">Spongeob Squarepants</strong><br>
+			Current Favorite Quote:<strong id="triviaQ" style="visibility:hidden">Deepfry the Deep fryer!!!!</strong>
 			</td>
 	</tr>
 	<tr>
@@ -59,10 +59,26 @@ style="width:404px;height:328px;">
 <img src="MySisters.jpg" alt="Me and my Sisters"
 style="width:404px;height:328px;">
 
-<!--<button type= "button"
-onclick="document.getElementById('trivia').style.visibility='visible'">
+<button type= "button"
+onclick="document.getElementById('triviaF').style.visibility='visible'">
 Know More!!!
-</button>-->
+</button>
+<button type= "button"
+onclick="document.getElementById('triviaP').style.visibility='visible'">
+Know More!!!
+</button>
+<button type= "button"
+onclick="document.getElementById('triviaG').style.visibility='visible'">
+Know More!!!
+</button>
+<button type= "button"
+onclick="document.getElementById('triviaT').style.visibility='visible'">
+Know More!!!
+</button>
+<button type= "button"
+onclick="document.getElementById('triviaQ').style.visibility='visible'">
+Know More!!!
+</button>
 <?php
 
 $FnameErr = $NnameErr = $EmailErr = $genderErr = $cellphoneErr = "";
