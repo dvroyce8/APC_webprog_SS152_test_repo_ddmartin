@@ -38,11 +38,11 @@ td {
 		<th>Hobbies & Interests</th>
 			<!--<td>Eating different cuisine<br>Playing Games<br>Watching Cartoons,Anime, & Animations<br>Learning new skills</td>-->
 			<td>
-			Favorite Food:<strong id="trivia" style="visibility:hidden">Bacon & Pie</strong><br>
-			Favorite Pasttime:<strong id="trivia" style="visibility:hidden">Gaming"</strong><br>
-			Favorite Game:<strong id="trivia" style="visibility:hidden">Tomba 2</strong><br>
-			Favorite TV Show:<strong id="trivia" style="visibility:hidden">Spongeob Squarepants</strong><br>
-			Current Favorite Quote:<strong id="trivia" style="visibility:hidden">Deepfry the Deep fryer!!!!</strong>
+			Favorite Food:<strong>Bacon & Pie</strong><br>
+			Favorite Pasttime:<strong>Gaming</strong><br>
+			Favorite Game:<strong>Tomba 2</strong><br>
+			Favorite TV Show:<strong> Spongeob Squarepants</strong><br>
+			Current Favorite Quote:<strong> Deepfry the Deep fryer!!!!</strong>
 			</td>
 	</tr>
 	<tr>
@@ -59,10 +59,10 @@ style="width:404px;height:328px;">
 <img src="MySisters.jpg" alt="Me and my Sisters"
 style="width:404px;height:328px;">
 
-<button type= "button"
+<!--<button type= "button"
 onclick="document.getElementById('trivia').style.visibility='visible'">
 Know More!!!
-</button>
+</button>-->
 <?php
 
 $FnameErr = $NnameErr = $EmailErr = $genderErr = $cellphoneErr = "";
