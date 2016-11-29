@@ -1,68 +1,12 @@
 </DOCTYPE html>
 <html>
 <head>
-	<title>Exercise 5</title>
+	<title>Exercise4</title>
 <style>
 .error {color: red;}
-body {
-	background-image: url("bg1exercise2_WIP.jpg");
-}
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-td {
-    background-color: #F0FFF0;
-    color: black;
-}
 </style>
 </head>
-<body >
-<table style="width:50%">
-	<tr>
-		<th>INFO</th>
-		<th>DETAILS</th>
-	<tr>
-		<th>Fullname</th>
-			<td>Daniel Vincent Royce Dimalanta Martin</td>
-	</tr>
-	<tr>
-		<th>Nickname</th>
-			<td>Royce</td>
-	</tr>
-	<tr>
-		<th>Hobbies & Interests</th>
-			<!--<td>Eating different cuisine<br>Playing Games<br>Watching Cartoons,Anime, & Animations<br>Learning new skills</td>-->
-			<td>
-			Favorite Food:<strong id="trivia" style="visibility:hidden">Bacon & Pie</strong><br>
-			Favorite Pasttime:<strong id="trivia" style="visibility:hidden">Gaming"</strong><br>
-			Favorite Game:<strong id="trivia" style="visibility:hidden">Tomba 2</strong><br>
-			Favorite TV Show:<strong id="trivia" style="visibility:hidden">Spongeob Squarepants</strong><br>
-			Current Favorite Quote:<strong id="trivia" style="visibility:hidden">Deepfry the Deep fryer!!!!</strong>
-			</td>
-	</tr>
-	<tr>
-		<th>Favorite websites</th>
-			<td><a title="https://www.facebook.com" href="https://www.facebook.com">Facebook</a><br>
-			<a title="https://www.messenger.com" href="https://www.messenger.com">FB Messenger</a><br>
-			<a title="https://www.youtube.com" href="https://www.youtube.com">YouTube</a><br>
-			<a title="http://kisscartoon.me" href="http://kisscartoon.me">KissCartoon</a><br>
-			<a title="http://kissanime.to" href="http://kissanime.to">KissAnime</a></td>
-	</tr>
-
-	<img src="MyFamily.jpg" alt="Me and my Family"
-style="width:404px;height:328px;">
-<img src="MySisters.jpg" alt="Me and my Sisters"
-style="width:404px;height:328px;">
-
-<button type= "button"
-onclick="document.getElementById('trivia').style.visibility='visible'">
-Know More!!!
-</button>
+<body>
 <?php
 
 $FnameErr = $NnameErr = $EmailErr = $genderErr = $cellphoneErr = "";
