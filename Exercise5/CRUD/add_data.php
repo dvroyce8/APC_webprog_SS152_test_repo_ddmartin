@@ -4,9 +4,13 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $full_name = $_POST['full_name'];
+ $nick_name = $_POST['nick_name'];
+ $email_address = $_POST['email_address'];
+ $home_address = $_POST['home_address'];
+ $gender = $_POST['gender'];
+ $cellphone_number = $_POST['cellphone_number'];
+ $comments = $_POST['comments'];
  // variables for input data
  
  // sql query for inserting data into database
@@ -52,7 +56,8 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="home_address" placeholder="Home Address" /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="gender" placeholder="Gender" required /></td>
+    <td><input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="Female"/>Female </td>
+	<td><input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="Male"/>Male </td>
     </tr>
 	<tr>
     <td><input type="text" name="cellphone_number" placeholder="Cell Phone Number" required /></td>
