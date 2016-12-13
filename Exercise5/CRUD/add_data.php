@@ -15,8 +15,9 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(full_name,nick_name_name,email_address,home_address,gender,cellphone_number,comments) VALUES('$full_name','$nick_name','$email_address','$home_address','$gender','$cellphone_number','$comments')";
+        $sql_query = "INSERT INTO users(full_name,nick_name,email_address,home_address,gender,cellphone_number,comments) VALUES('$full_name','$nick_name','$email_address','$home_address','$gender','$cellphone_number','$comments')";
  mysqli_query($con, $sql_query);
+ //echo $sql_query;
         
         // sql query for inserting data into database
  
@@ -44,7 +45,7 @@ if(isset($_POST['btn-save']))
     <td align="center"><a href="index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="full__name" placeholder="Full Name" required /></td>
+    <td><input type="text" name="full_name" placeholder="Full Name" required /></td>
     </tr>
     <tr>
     <td><input type="text" name="nick_name" placeholder="Nickname" required /></td>
