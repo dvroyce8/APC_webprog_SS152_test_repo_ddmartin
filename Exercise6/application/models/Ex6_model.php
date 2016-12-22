@@ -6,53 +6,53 @@ class Ex6_model extends CI_Model {
         $this->load->database();
     }
     
-    public function get_ex6($slug = FALSE)
+    public function get_ex6($full_name = FALSE)
     {
-        if ($slug === FALSE)
+        if ($full_name === FALSE)
         {
             $query = $this->db->get('ex6');
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('ex6', array('slug' => $slug));
+        $query = $this->db->get_where('ex6', array('full_name' => $full_name));
         return $query->row_array();
     }
     
-    public function get_ex6_by_id($id = 0)
+    public function get_ex6_by_id($user_id = 0)
     {
-        if ($id === 0)
+        if ($user_id === 0)
         {
             $query = $this->db->get('ex6');
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('ex6', array('id' => $id));
+        $query = $this->db->get_where('ex6', array('user_id' => $user_id));
         return $query->row_array();
     }
     
-    public function set_ex6($id = 0)
+    public function set_ex6($user_id = 0)
     {
         $this->load->helper('url');
  
-        $slug = url_title($this->input->post('title'), 'dash', TRUE);
+        $full_name = url_title($this->input->post('title'), 'dash', TRUE);
  
         $data = array(
             'title' => $this->input->post('title'),
-            'slug' => $slug,
+            'full_name' => $full_name,
             'text' => $this->input->post('text')
         );
         
-        if ($id == 0) {
+        if ($user_id == 0) {
             return $this->db->insert('ex6', $data);
         } else {
-            $this->db->where('id', $id);
+            $this->db->where('user_id', $user_id);
             return $this->db->update('ex6', $data);
         }
     }
     
-    public function delete_ex6($id)
+    public function delete_ex6($user_id)
     {
-        $this->db->where('id', $id);
+        $this->db->where('user_id', $user_id);
         return $this->db->delete('ex6');
     }
 }
