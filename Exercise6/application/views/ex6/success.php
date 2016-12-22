@@ -1,1 +1,1 @@
-<p>ex6 added successfully!</p>
+<p>Data was added successfully!</p>
