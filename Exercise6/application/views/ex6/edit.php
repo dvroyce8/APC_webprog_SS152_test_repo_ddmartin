@@ -2,7 +2,7 @@
  
 <?php echo validation_errors(); ?>
  
-<?php echo form_open('ex6/edit/'.$ex6_item['id']); ?>
+<?php echo form_open('ex6/edit/'.$ex6_item['user_id']); ?>
     <table>
         <tr>
             <td><label for="full_name">Full Name</label></td>

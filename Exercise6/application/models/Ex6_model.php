@@ -34,10 +34,10 @@ class Ex6_model extends CI_Model {
     {
         $this->load->helper('url');
  
-        $full_name = url_title($this->input->post('title'), 'dash', TRUE);
+        $full_name = url_title($this->input->post('full_name'), 'dash', TRUE);
  
         $data = array(
-            'title' => $this->input->post('title'),
+            'full_name' => $this->input->post('full_name'),
             'full_name' => $full_name,
             'text' => $this->input->post('text')
         );

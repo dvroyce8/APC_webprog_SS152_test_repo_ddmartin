@@ -11,7 +11,7 @@ class Ex6 extends CI_Controller {
     public function index()
     {
         $data['ex6'] = $this->ex6_model->get_ex6();
-        $data['title'] = 'ex6 archive';
+        $data['full_name'] = 'ex6 archive';
  
         $this->load->view('templates/header', $data);
         $this->load->view('ex6/index', $data);    }
@@ -25,7 +25,7 @@ class Ex6 extends CI_Controller {
             show_404();
         }
  
-        $data['title'] = $data['ex6_item']['title'];
+        $data['full_name'] = $data['ex6_item']['full_name'];
  
         $this->load->view('templates/header', $data);
         $this->load->view('ex6/view', $data);
@@ -36,9 +36,9 @@ class Ex6 extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
  
-        $data['title'] = 'Create a ex6 item';
+        $data['full_name'] = 'Create a ex6 item';
  
-        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('full_name', 'full_name', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
  
         if ($this->form_validation->run() === FALSE)
@@ -65,10 +65,10 @@ class Ex6 extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
-        $data['title'] = 'Edit a ex6 item';        
+        $data['full_name'] = 'Edit a ex6 item';        
         $data['ex6_item'] = $this->ex6_model->get_ex6_by_id($id);
         
-        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('full_name', 'full_name', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
  
         if ($this->form_validation->run() === FALSE)

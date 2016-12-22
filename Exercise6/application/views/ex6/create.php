@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="submit" value="Create ex6 item" /></td>
+            <td><input type="submit" name="submit" value="Create data entry" /></td>
         </tr>
     </table>    
 </form>
