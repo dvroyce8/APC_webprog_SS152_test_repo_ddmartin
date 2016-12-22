@@ -1,7 +1,7 @@
-$route['news'] = 'news';
-$route['news/create'] = 'news/create';
+$route['ex6'] = 'ex6';
+$route['ex6/create'] = 'ex6/create';
  
-$route['news/edit/(:any)'] = 'news/edit/$1';
+$route['ex6/edit/(:any)'] = 'ex6/edit/$1';
  
-$route['news/view/(:any)'] = 'news/view/$1';
-$route['news/(:any)'] = 'news/view/$1';
+$route['ex6/view/(:any)'] = 'ex6/view/$1';
+$route['ex6/(:any)'] = 'ex6/view/$1';
