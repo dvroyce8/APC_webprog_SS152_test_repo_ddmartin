@@ -58,8 +58,6 @@ if(isset($_POST['btn-save']))
     </tr>
 	<tr>
     <td>
-	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="Male"/>Male<br>
-	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="Female"/>Female<br>
 	<input type="text" name="gender" placeholder="other" />
 	</td>
     </tr>
