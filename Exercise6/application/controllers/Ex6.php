@@ -14,13 +14,11 @@ class Ex6 extends CI_Controller {
         $data['title'] = 'ex6 archive';
  
         $this->load->view('templates/header', $data);
-        $this->load->view('ex6/index', $data);
-        //$this->load->view('templates/footer');
-    }
+        $this->load->view('ex6/index', $data);    }
  
-    public function view($slug = NULL)
+    public function view($full_name = NULL)
     {
-        $data['ex6_item'] = $this->ex6_model->get_ex6($slug);
+        $data['ex6_item'] = $this->ex6_model->get_ex6($full_name);
         
         if (empty($data['ex6_item']))
         {
@@ -31,7 +29,6 @@ class Ex6 extends CI_Controller {
  
         $this->load->view('templates/header', $data);
         $this->load->view('ex6/view', $data);
-        $this->load->view('templates/footer');
     }
     
     public function create()
@@ -47,17 +44,13 @@ class Ex6 extends CI_Controller {
         if ($this->form_validation->run() === FALSE)
         {
             $this->load->view('templates/header', $data);
-            $this->load->view('ex6/create');
-            $this->load->view('templates/footer');
- 
+            $this->load->view('ex6/create'); 
         }
         else
         {
             $this->ex6_model->set_ex6();
             $this->load->view('templates/header', $data);
-            $this->load->view('ex6/success');
-            $this->load->view('templates/footer');
-        }
+            $this->load->view('ex6/success');        }
     }
     
     public function edit()
@@ -81,9 +74,7 @@ class Ex6 extends CI_Controller {
         if ($this->form_validation->run() === FALSE)
         {
             $this->load->view('templates/header', $data);
-            $this->load->view('ex6/edit', $data);
-            $this->load->view('templates/footer');
- 
+            $this->load->view('ex6/edit', $data); 
         }
         else
         {
