@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="submit" value="Edit ex6 item" /></td>
+            <td><input type="submit" name="submit" value="Edit data entry" /></td>
         </tr>
     </table>
 </form>

@@ -1,4 +1,4 @@
-<h2><?php echo 'Simple CRUD'; ?></h2>
+<h2><?php echo 'My Database'; ?></h2>
  
 <table border='1' cellpadding='4'>
     <tr>
@@ -9,6 +9,7 @@
 		<td><strong>Gender</strong></td>
 		<td><strong>Cellphone Number</strong></td>
 		<td><strong>Comments</strong></td>
+		<td><strong>Action</strong></td>
     </tr>
 <?php foreach ($ex6 as $ex6_item): ?>
         <tr>
@@ -20,7 +21,7 @@
 			<td><?php echo $ex6_item['cellphone_number']; ?></td>
             <td><?php echo $ex6_item['comments']; ?></td>
             <td>
-                /* <a href="<?php echo site_url('ex6/'.$ex6_item['full_name']); ?>">View</a> | */
+                <a href="<?php echo site_url('ex6/'.$ex6_item['user_id']); ?>">View</a> | 
                 <a href="<?php echo site_url('ex6/edit/'.$ex6_item['user_id']); ?>">Edit</a> |
                 <a href="<?php echo site_url('ex6/delete/'.$ex6_item['user_id']); ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>

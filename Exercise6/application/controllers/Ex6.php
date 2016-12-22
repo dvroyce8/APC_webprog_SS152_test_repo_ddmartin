@@ -11,21 +11,22 @@ class Ex6 extends CI_Controller {
     public function index()
     {
         $data['ex6'] = $this->ex6_model->get_ex6();
-        $data['full_name'] = 'ex6 archive';
+        $data['nick_name'] = 'My archive';
  
         $this->load->view('templates/header', $data);
-        $this->load->view('ex6/index', $data);    }
+        $this->load->view('ex6/index', $data);    
+	}
  
-    public function view($full_name = NULL)
+    public function view($nick_name = NULL)
     {
-        $data['ex6_item'] = $this->ex6_model->get_ex6($full_name);
+        $data['ex6_item'] = $this->ex6_model->get_ex6($nick_name);
         
-        if (empty($data['ex6_item']))
+        /*if (empty($data['ex6_item']))
         {
             show_404();
-        }
+        }*/
  
-        $data['full_name'] = $data['ex6_item']['full_name'];
+        $data['nick_name'] = $data['ex6_item']['nick_name'];
  
         $this->load->view('templates/header', $data);
         $this->load->view('ex6/view', $data);
@@ -68,7 +69,7 @@ class Ex6 extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
-        $data['full_name'] = 'Edit data entry';        
+        $data['nick_name'] = 'Edit data entry';        
         $data['ex6_item'] = $this->ex6_model->get_ex6_by_id($user_id);
         
         $this->form_validation->set_rules('full_name', 'full_name', 'required');

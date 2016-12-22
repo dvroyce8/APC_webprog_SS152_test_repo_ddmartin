@@ -6,15 +6,15 @@ class Ex6_model extends CI_Model {
         $this->load->database();
     }
     
-    public function get_ex6($full_name = FALSE)
+    public function get_ex6($nick_name = FALSE)
     {
-        if ($full_name === FALSE)
+        if ($nick_name === FALSE)
         {
             $query = $this->db->get('ex6');
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('ex6', array('full_name' => $full_name));
+        $query = $this->db->get_where('ex6', array('nick_name' => $nick_name));
         return $query->row_array();
     }
     
@@ -34,12 +34,16 @@ class Ex6_model extends CI_Model {
     {
         $this->load->helper('url');
  
-        $full_name = url_title($this->input->post('full_name'), 'dash', TRUE);
+        $full_name = url_title($this->input->post('nick_name'), 'dash', TRUE);
  
         $data = array(
             'full_name' => $this->input->post('full_name'),
-            'full_name' => $full_name,
-            'text' => $this->input->post('text')
+            'nick_name' => $this->input->post('nick_name'),
+			'email_address' => $this->input->post('email_address'),
+			'home_address' => $this->input->post('home_address'),
+			'gender' => $this->input->post('gender'),
+			'cellphone_number' => $this->input->post('cellphone_number'),
+            'comments' => $this->input->post('comments')
         );
         
         if ($user_id == 0) {
