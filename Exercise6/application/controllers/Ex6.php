@@ -15,7 +15,7 @@ class Ex6 extends CI_Controller {
  
         $this->load->view('templates/header', $data);
         $this->load->view('ex6/index', $data);
-        $this->load->view('templates/footer');
+        //$this->load->view('templates/footer');
     }
  
     public function view($slug = NULL)
