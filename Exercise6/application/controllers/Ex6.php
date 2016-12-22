@@ -36,10 +36,13 @@ class Ex6 extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
  
-        $data['full_name'] = 'Create a ex6 item';
+        $data['full_name'] = 'Create data entry';
  
         $this->form_validation->set_rules('full_name', 'full_name', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+		$this->form_validation->set_rules('nick_name', 'nick_name', 'required');
+        $this->form_validation->set_rules('email_address', 'email_address', 'required');
+		$this->form_validation->set_rules('gender', 'gender', 'required');
+		$this->form_validation->set_rules('cellphone_number', 'cellphone_number', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -65,11 +68,14 @@ class Ex6 extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
-        $data['full_name'] = 'Edit a ex6 item';        
-        $data['ex6_item'] = $this->ex6_model->get_ex6_by_id($id);
+        $data['full_name'] = 'Edit data entry';        
+        $data['ex6_item'] = $this->ex6_model->get_ex6_by_id($user_id);
         
         $this->form_validation->set_rules('full_name', 'full_name', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+		$this->form_validation->set_rules('nick_name', 'nick_name', 'required');
+        $this->form_validation->set_rules('email_address', 'email_address', 'required');
+		$this->form_validation->set_rules('gender', 'gender', 'required');
+		$this->form_validation->set_rules('cellphone_number', 'cellphone_number', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -78,8 +84,8 @@ class Ex6 extends CI_Controller {
         }
         else
         {
-            $this->ex6_model->set_ex6($id);
-            //$this->load->view('ex6/success');
+            $this->ex6_model->set_ex6($user_id);
+            $this->load->view('ex6/success');
             redirect( base_url() . 'index.php/ex6');
         }
     }
@@ -88,14 +94,14 @@ class Ex6 extends CI_Controller {
     {
         $id = $this->uri->segment(3);
         
-        if (empty($id))
+        if (empty($user_id))
         {
             show_404();
         }
                 
-        $ex6_item = $this->ex6_model->get_ex6_by_id($id);
+        $ex6_item = $this->ex6_model->get_ex6_by_id($user_id);
         
-        $this->ex6_model->delete_ex6($id);        
+        $this->ex6_model->delete_ex6($user_id);        
         redirect( base_url() . 'index.php/ex6');        
     }
 }
