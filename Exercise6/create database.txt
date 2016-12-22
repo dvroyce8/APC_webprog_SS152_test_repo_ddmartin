@@ -1,0 +1,31 @@
+--
+-- Create database `Exercise6`
+--
+ 
+CREATE DATABASE `Exercise6`;
+ 
+use `Exercise6`;
+ 
+--
+-- Table structure for table `ex6`
+--
+ 
+CREATE TABLE IF NOT EXISTS `ex6` (
+  `user_id` INT( 10 ) NOT NULL AUTO_INCREMENT,
+  `full_name` VARCHAR( 100 ) NOT NULL ,
+  `nick_name` VARCHAR( 25 ) NOT NULL ,
+  `email_address` VARCHAR( 45 ) NOT NULL,
+  `home_address` VARCHAR( 100 ) NOT NULL,
+  `gender`VARCHAR( 20 ) NOT NULL,
+  `cellphone_number` VARCHAR ( 11 ) NOT NULL,
+  `comments` VARCHAR ( 500 ) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ 
+--
+-- Dumping data for table `ex6`
+--
+ 
+INSERT INTO `ex6` (`user_id`, `full_name`, `nick_name`, `email_address`, `home_address`, `gender`, `cellphone_number`, `comments`) VALUES
+(1, 'Daniel Vincent Royce D. Martin', 'Royce','dvroyce08@gmail.com','AA-111 Galeria de Magallanes','Male','09771674103', 'Time is made out of circles. That is why clocks are round!!!');
+
