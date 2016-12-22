@@ -58,7 +58,7 @@ if(isset($_POST['btn-save']))
     </tr>
 	<tr>
     <td>
-	<input type="text" name="gender" placeholder="other" />
+	<input type="text" name="gender" placeholder="gender" />
 	</td>
     </tr>
 	<tr>

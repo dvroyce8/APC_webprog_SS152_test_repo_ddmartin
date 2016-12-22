@@ -80,7 +80,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="home_address" placeholder="Home Address" value="<?php echo $fetched_row['home_address']; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="gender" placeholder="other" value="
+    <td><input type="text" name="gender" placeholder="gender" value="
 	<?php echo $fetched_row['gender']; ?>" required /> </td>
     </tr>
 	<tr>
