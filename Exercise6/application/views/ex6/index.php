@@ -8,10 +8,15 @@
     </tr>
 <?php foreach ($ex6 as $ex6_item): ?>
         <tr>
-            <td><?php echo $ex6_item['title']; ?></td>
-            <td><?php echo $ex6_item['text']; ?></td>
+            <td><?php echo $ex6_item['full_name']; ?></td>
+			<td><?php echo $ex6_item['nick_name']; ?></td>
+			<td><?php echo $ex6_item['email_address']; ?></td>
+			<td><?php echo $ex6_item['home_address']; ?></td>
+			<td><?php echo $ex6_item['gender']; ?></td>
+			<td><?php echo $ex6_item['cellphone_number']; ?></td>
+            <td><?php echo $ex6_item['comments']; ?></td>
             <td>
-                <a href="<?php echo site_url('ex6/'.$ex6_item['slug']); ?>">View</a> |
+                /* <a href="<?php echo site_url('ex6/'.$ex6_item['slug']); ?>">View</a> | */
                 <a href="<?php echo site_url('ex6/edit/'.$ex6_item['id']); ?>">Edit</a> |
                 <a href="<?php echo site_url('ex6/delete/'.$ex6_item['id']); ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>
