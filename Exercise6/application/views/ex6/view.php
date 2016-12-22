@@ -1,5 +1,5 @@
 <?php
-echo '<h2>'.$ex6_item['full_name'].'</h2>';
+echo <h2>$ex6_item['full_name']</h2>;
 echo $ex6_item['nick_name'];
 echo $ex6_item['email_address'];
 echo $ex6_item['home_address'];

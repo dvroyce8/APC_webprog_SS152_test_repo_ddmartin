@@ -60,7 +60,7 @@ class Ex6 extends CI_Controller {
     {
         $id = $this->uri->segment(3);
         
-        if (empty($id))
+        if (empty($user_id))
         {
             show_404();
         }
